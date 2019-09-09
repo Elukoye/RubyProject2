@@ -52,8 +52,8 @@ module Enumerable
     my_each do |item|
       if block_given?
         return false if yield item
-      else
-        return true if item
+       else
+         return false if item
       end
     end
   true
@@ -80,11 +80,9 @@ module Enumerable
 end
     puts %w{ant bear cat}.my_none? { |word| word.length == 5 } #=> true
     puts %w{ant bear cat}.my_none? { |word| word.length >= 4 } #=> false
-    # %w{ant bear cat}.my_none?(/d/)                        #=> true
-    # [1, 3.14, 42].my_none?(Float)                         #=> false
+    # %w{ant bear cat}.my_none?(/d/)                             #=> true
+    # [1, 3.14, 42].my_none?(Float)                              #=> false
     puts [].my_none?                                           #=> true
     puts [nil].my_none?                                        #=> true
     puts [nil, false].my_none?                                 #=> true
     puts [nil, false, true].my_none?                           #=> false
-
-    ["mon","tue","wed"].my_each_with_index {|x, i| print "#{i}#{x}\t"}
