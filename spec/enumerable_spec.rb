@@ -40,5 +40,12 @@ RSpec.describe Enumerable do
             expect([3,5,7,9].my_none? { |item| item.even? }).to eql(true)
         end
     end
+
+    describe "#my_count" do
+        it "counts no of element in an array" do
+            expect([3,5,7,9].my_count).to eql(4)
+            expect([3,5,7,9].my_count { |item| item.even?}).to eql(0)
+        end
+    end
         
 end
