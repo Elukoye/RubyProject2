@@ -47,5 +47,11 @@ RSpec.describe Enumerable do
             expect([3,5,7,9].my_count { |item| item.even?}).to eql(0)
         end
     end
+
+    describe "#my_map" do
+        it "counts no of element in an array" do
+            expect([3,5,7,9].my_map { |item| item*2}).to eql([6,10,14,18])
+        end
+    end
         
 end
