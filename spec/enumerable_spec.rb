@@ -36,6 +36,9 @@ RSpec.describe Enumerable do
     end
 
     describe "#my_none?" do
-        it ""
+        it "return true when all element are false otherwise false" do
+            expect([3,5,7,9].my_none? { |item| item.even? }).to eql(true)
+        end
+    end
         
 end
