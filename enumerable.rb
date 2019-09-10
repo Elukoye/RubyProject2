@@ -75,9 +75,4 @@ module Enumerable
     result
   end
 end
-    puts %w{ant bear cat}.my_none? { |word| word.length == 5 } #=> true
-    puts %w{ant bear cat}.my_none? { |word| word.length >= 4 } #=> false
-    puts [].my_none?                                           #=> true
-    puts [nil].my_none?                                        #=> true
-    puts [nil, false].my_none?                                 #=> true
-    puts [nil, false, true].my_none?                           #=> false
+   
