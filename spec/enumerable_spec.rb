@@ -53,5 +53,11 @@ RSpec.describe Enumerable do
             expect([3,5,7,9].my_map { |item| item*2}).to eql([6,10,14,18])
         end
     end
+
+    describe "#my_inject" do
+        it "pass each element and accumulate each sequentially" do
+            expect([1,2,3,4].my_inject { |item,sum| item+sum}).to eql(10)
+        end
+    end
         
 end
